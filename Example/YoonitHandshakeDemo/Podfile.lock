@@ -1,0 +1,29 @@
+PODS:
+  - PowerAuth2 (1.5.3)
+  - WultraSSLPinning/Lib (1.3.2)
+  - WultraSSLPinning/PowerAuthIntegration (1.3.2):
+    - PowerAuth2 (>= 0.19.1)
+    - WultraSSLPinning/Lib
+  - YoonitHandshake (1.0.0):
+    - WultraSSLPinning/PowerAuthIntegration
+
+DEPENDENCIES:
+  - YoonitHandshake (from `../../`)
+
+SPEC REPOS:
+  trunk:
+    - PowerAuth2
+    - WultraSSLPinning
+
+EXTERNAL SOURCES:
+  YoonitHandshake:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  PowerAuth2: 1e700bf01f707d199e723dffedeacd86528b5a9d
+  WultraSSLPinning: 3b15f18eed17df76ce97ce3ab023c4242d074416
+  YoonitHandshake: a500516a30c1eb21a9f18681942e72504b850577
+
+PODFILE CHECKSUM: 2fd12664f1a61e2029650392ea6c9e39878c149b
+
+COCOAPODS: 1.10.1
