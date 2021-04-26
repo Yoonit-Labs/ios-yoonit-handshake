@@ -19,6 +19,7 @@
 		5C65788825D32FB2001171F8 /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C65788725D32FB2001171F8 /* libnanopb.a */; };
 		5C65788C25D32FB2001171F8 /* libPromisesObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C65788B25D32FB2001171F8 /* libPromisesObjC.a */; };
 		5C65788E25D32FB2001171F8 /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C65788D25D32FB2001171F8 /* libProtobuf.a */; };
+		5CFFEA032636F3C800A95186 /* HandshakeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFFEA022636F3C800A95186 /* HandshakeResult.swift */; };
 		6176EF20252CFA4300F4D4DD /* YoonitHandshake.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6176EF1F252CFA4300F4D4DD /* YoonitHandshake.podspec */; };
 		6176EF23252CFC9500F4D4DD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6176EF22252CFC9500F4D4DD /* LICENSE */; };
 		6176EF26252CFEE000F4D4DD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6176EF25252CFEE000F4D4DD /* README.md */; };
@@ -40,6 +41,7 @@
 		5C65788B25D32FB2001171F8 /* libPromisesObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPromisesObjC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C65788D25D32FB2001171F8 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB4F8EE25CC7DDC001D3606 /* YoonitHandshake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoonitHandshake.h; sourceTree = "<group>"; };
+		5CFFEA022636F3C800A95186 /* HandshakeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandshakeResult.swift; sourceTree = "<group>"; };
 		6176EEF6252CF9D200F4D4DD /* YoonitHandshake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YoonitHandshake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6176EEFA252CF9D200F4D4DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6176EF1F252CFA4300F4D4DD /* YoonitHandshake.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YoonitHandshake.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -75,6 +77,7 @@
 			children = (
 				5C06E5CE25D1FED400E6770F /* Handshake.swift */,
 				5C079BC5263219E500F993D3 /* HandshakeListener.swift */,
+				5CFFEA022636F3C800A95186 /* HandshakeResult.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFFEA032636F3C800A95186 /* HandshakeResult.swift in Sources */,
 				5C06E5CF25D1FED400E6770F /* Handshake.swift in Sources */,
 				5C079BC6263219E500F993D3 /* HandshakeListener.swift in Sources */,
 			);

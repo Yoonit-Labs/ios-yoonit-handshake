@@ -13,11 +13,6 @@ import Foundation
 
 @objc
 public protocol HandshakeListener {
-
-    func continueExecution()
-
-    func handleFailedUpdate(
-        _ type: Int,
-        _ error: String
-    )
+    
+    func onResult(_ result: HandshakeResult)
 }
