@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F21CA5BA7243F2EBB99D62422951EFCD"
+               BlueprintIdentifier = "8EA68DD6C2C1C315C5C68811106D4E25"
                BuildableName = "YoonitHandshake.framework"
                BlueprintName = "YoonitHandshake"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
