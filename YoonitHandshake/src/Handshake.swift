@@ -12,26 +12,29 @@
 import UIKit
 import WultraSSLPinning
 
-public class Handshake {
+@objc
+public class Handshake: NSObject {
     
-    private var handshakeListener: HandshakeListener
+    private var handshakeListener: HandshakeListener!
     private var certStore: CertStore? = nil
     
+    override init() {}
+        
     public init(
         publicKey: String,
         serviceUrl: String,
         handshakeListener: HandshakeListener
     ) {
         self.handshakeListener = handshakeListener
-        
+
         if let url = URL(string: serviceUrl) {
             let configuration = CertStoreConfiguration(
                 serviceUrl: url,
                 publicKey: publicKey
             )
-            
+
             self.certStore = CertStore.powerAuthCertStore(configuration: configuration)
-        } else {            
+        } else {
             self.handshakeListener.onResult(HandshakeResult.INVALID_URL_SERVICE)
         }
     }
