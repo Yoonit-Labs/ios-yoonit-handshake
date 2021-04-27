@@ -17,29 +17,23 @@ class HandshakeViewController: UIViewController, HandshakeListener {
     @IBOutlet var updateFingerprintLabel: UILabel!
     
     private let publicKey: String = ""
-    
+        
     private let serviceUrl: String = ""
         
+    private var handshake: Handshake!
+    
     override func viewDidLoad() {
-        self.updateFingerprintLabel.sizeToFit()         
+        self.updateFingerprintLabel.sizeToFit()
+        self.handshake = Handshake(self)
     }
     
     @IBAction func onUpdateFingerprint(_ sender: UIButton) {
-        Handshake(
-            publicKey: self.publicKey,
-            serviceUrl: self.serviceUrl,
-            handshakeListener: self
-        ).updateFingerprints()
+        self.handshake.updateFingerprints(
+            self.publicKey,
+            self.serviceUrl
+        )
     }
-    
-    @IBAction func onUpdateFingeprintWithInvalidPublicKey(_ sender: UIButton) {
-        Handshake(
-            publicKey: self.publicKey,
-            serviceUrl: self.serviceUrl,
-            handshakeListener: self
-        ).updateFingerprints()
-    }
-    
+        
     func onResult(_ result: HandshakeResult) {
         switch result {
         case HandshakeResult.OK:

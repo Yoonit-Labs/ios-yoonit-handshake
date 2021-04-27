@@ -16,32 +16,31 @@ import WultraSSLPinning
 public class Handshake: NSObject {
     
     private var handshakeListener: HandshakeListener!
-    private var certStore: CertStore? = nil
     
-    override init() {}
-        
-    public init(
-        publicKey: String,
-        serviceUrl: String,
-        handshakeListener: HandshakeListener
-    ) {
+    @objc
+    public init(_ handshakeListener: HandshakeListener) {
         self.handshakeListener = handshakeListener
-
+    }
+        
+    @objc
+    public func updateFingerprints(
+        _ publicKey: String,
+        _ serviceUrl: String
+    ) {
+        var certStore: CertStore? = nil
+        
         if let url = URL(string: serviceUrl) {
             let configuration = CertStoreConfiguration(
                 serviceUrl: url,
                 publicKey: publicKey
             )
 
-            self.certStore = CertStore.powerAuthCertStore(configuration: configuration)
+            certStore = CertStore.powerAuthCertStore(configuration: configuration)
         } else {
             self.handshakeListener.onResult(HandshakeResult.INVALID_URL_SERVICE)
         }
-    }
         
-    @objc
-    public func updateFingerprints() {
-        self.certStore?.update { (result, error) in
+        certStore?.update { (result, error) in
             switch result {
             case .ok:
                 self.handshakeListener.onResult(HandshakeResult.OK)
