@@ -20,6 +20,7 @@
 /* Begin PBXFileReference section */
 		5C06E54725D1F09A00E6770F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		5C06E5A925D1FBC500E6770F /* YoonitHandshake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YoonitHandshake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CB6F4F82638511B008CF33C /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5FDCD5D29CFF54C3E8CE5751 /* Pods-YoonitHandshakeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoonitHandshakeDemo.release.xcconfig"; path = "Target Support Files/Pods-YoonitHandshakeDemo/Pods-YoonitHandshakeDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6176EFBE252E496D00F4D4DD /* YoonitHandshakeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoonitHandshakeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6176EFC1252E496D00F4D4DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		6176EFB5252E496C00F4D4DD = {
 			isa = PBXGroup;
 			children = (
+				5CB6F4F82638511B008CF33C /* Development.xcconfig */,
 				5C06E54725D1F09A00E6770F /* Podfile */,
 				6176EFC0252E496D00F4D4DD /* YoonitHandshakeDemo */,
 				6176EFBF252E496D00F4D4DD /* Products */,
@@ -241,6 +243,7 @@
 /* Begin XCBuildConfiguration section */
 		6176EFD0252E496F00F4D4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CB6F4F82638511B008CF33C /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

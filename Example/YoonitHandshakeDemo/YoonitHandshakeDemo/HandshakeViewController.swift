@@ -16,9 +16,9 @@ class HandshakeViewController: UIViewController, HandshakeListener {
             
     @IBOutlet var updateFingerprintLabel: UILabel!
     
-    private let publicKey: String = ""
+    private let publicKey = Bundle.main.object(forInfoDictionaryKey: "PUBLIC_KEY") as! String
         
-    private let serviceUrl: String = ""
+    private let serviceUrl = Bundle.main.object(forInfoDictionaryKey: "SERVICE_URL") as! String
         
     private var handshake: Handshake!
     
