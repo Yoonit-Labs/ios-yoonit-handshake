@@ -28,14 +28,19 @@ end
 
 ## Usage
 
+First, in the `Development.xcconfig`, insert the `SERVICE_URL` and `PUBLIC_KEY` values. 
+
 ```swift
 import UIKit
 import YoonitHandshake
 
 class HandshakeViewController: HandshakeListener {
                         
+    private var handshake = Handshake()
+                        
     func updateFingerprints() {
-        Handshake(self).updateFingerprints(
+        self.handshake.handshakeListener = self
+        self.handshake.updateFingerprints(
             "YOUR PUBLIC KEY",
             "YOUR SERVICE URL"
         )

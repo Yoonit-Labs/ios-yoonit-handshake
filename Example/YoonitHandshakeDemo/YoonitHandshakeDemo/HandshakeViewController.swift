@@ -20,11 +20,11 @@ class HandshakeViewController: UIViewController, HandshakeListener {
         
     private let serviceUrl = Bundle.main.object(forInfoDictionaryKey: "SERVICE_URL") as! String
         
-    private var handshake: Handshake!
+    private var handshake = Handshake()
     
     override func viewDidLoad() {
         self.updateFingerprintLabel.sizeToFit()
-        self.handshake = Handshake(self)
+        self.handshake.handshakeListener = self
     }
     
     @IBAction func onUpdateFingerprint(_ sender: UIButton) {
