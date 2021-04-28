@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJw-m1-Etz">
-                                <rect key="frame" x="20" y="110" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="70" width="374" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="342" id="8dG-86-pG9"/>
                                 </constraints>
@@ -25,15 +25,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbU-cj-jFZ">
-                                <rect key="frame" x="20" y="20" width="283" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update Fingerprint with invalid public key"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI6-34-HhY">
-                                <rect key="frame" x="20" y="58" width="271" height="30"/>
+                                <rect key="frame" x="20" y="20" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update Fingerprint with valid public key"/>
+                                <state key="normal" title="Update Fingerprint"/>
                                 <connections>
                                     <action selector="onUpdateFingerprint:" destination="5Ka-4Y-I1O" eventType="touchUpInside" id="nMd-8O-fvb"/>
                                 </connections>
@@ -44,7 +39,7 @@
                         <constraints>
                             <constraint firstItem="fGp-dC-Ymu" firstAttribute="trailing" secondItem="bJw-m1-Etz" secondAttribute="trailing" constant="20" id="XMQ-Lt-udI"/>
                             <constraint firstItem="bJw-m1-Etz" firstAttribute="leading" secondItem="fGp-dC-Ymu" secondAttribute="leading" constant="20" id="ovY-lT-TVo"/>
-                            <constraint firstItem="bJw-m1-Etz" firstAttribute="top" secondItem="E4T-vt-oYm" secondAttribute="topMargin" constant="110" id="rSX-O6-sVR"/>
+                            <constraint firstItem="bJw-m1-Etz" firstAttribute="top" secondItem="E4T-vt-oYm" secondAttribute="topMargin" constant="70" id="rSX-O6-sVR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Yoonit Handshake" id="p7Z-0U-585"/>

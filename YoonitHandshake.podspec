@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "YoonitHandshake"
   spec.version      = "1.0.0"
-  spec.summary      = "The dynamic SSL pinning iOS module"
+  spec.summary      = "A iOS Cocoa project written in Swift implementing dynamic SSL pinning."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-    ""
+    "The SSL pinning is a technique mitigating man-in-the-middle attacks against the secure HTTP communication, but has a drawback, the certificate's expiration date. This resolve this problem, implementing dynamic SSL pinning, providing easy to use fingerprint validation on the TLS handshake. The remote server must be the responsible to update the certificate(s)."
                    DESC
 
   spec.homepage     = "https://github.com/Yoonit-Labs/ios-yoonit-handshake"
@@ -79,13 +79,5 @@ Pod::Spec.new do |spec|
 
   spec.swift_version = "5.0"
 
-  spec.static_framework = true
-
   spec.dependency 'WultraSSLPinning/PowerAuthIntegration'
-
-  # spec.pod_target_xcconfig = {
-  #   'LIBRARY_SEARCH_PATHS' => '${SRCROOT}/**',
-  #   'FRAMEWORK_SEARCH_PATHS' => '${SRCROOT}/**',
-  #   'HEADER_SEARCH_PATHS' => '${SRCROOT}/**'
-  # }
 end

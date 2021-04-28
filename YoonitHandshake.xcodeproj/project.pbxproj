@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5C06E5CF25D1FED400E6770F /* Handshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06E5CE25D1FED400E6770F /* Handshake.swift */; };
 		5C079BC6263219E500F993D3 /* HandshakeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C079BC5263219E500F993D3 /* HandshakeListener.swift */; };
-		5C0C64392542108B00EDF95B /* logo_cyberlabs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0C64382542108B00EDF95B /* logo_cyberlabs.png */; };
 		5C5056FF260BA65A00286F91 /* YoonitHandshake.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB4F8EE25CC7DDC001D3606 /* YoonitHandshake.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C65787E25D32FB2001171F8 /* libGoogleDataTransport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C65787D25D32FB2001171F8 /* libGoogleDataTransport.a */; };
 		5C65788025D32FB2001171F8 /* libGoogleToolboxForMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C65787F25D32FB2001171F8 /* libGoogleToolboxForMac.a */; };
@@ -31,7 +30,6 @@
 		1AF5BB726B18F5D5DC50A347 /* Pods-YoonitHandshake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoonitHandshake.debug.xcconfig"; path = "Target Support Files/Pods-YoonitHandshake/Pods-YoonitHandshake.debug.xcconfig"; sourceTree = "<group>"; };
 		5C06E5CE25D1FED400E6770F /* Handshake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handshake.swift; sourceTree = "<group>"; };
 		5C079BC5263219E500F993D3 /* HandshakeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandshakeListener.swift; sourceTree = "<group>"; };
-		5C0C64382542108B00EDF95B /* logo_cyberlabs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_cyberlabs.png; sourceTree = "<group>"; };
 		5C65787D25D32FB2001171F8 /* libGoogleDataTransport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleDataTransport.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C65787F25D32FB2001171F8 /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C65788125D32FB2001171F8 /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				6176EFA7252E476000F4D4DD /* Example */,
-				5C0C64382542108B00EDF95B /* logo_cyberlabs.png */,
 				6176EF25252CFEE000F4D4DD /* README.md */,
 				6176EF22252CFC9500F4D4DD /* LICENSE */,
 				6176EF1F252CFA4300F4D4DD /* YoonitHandshake.podspec */,
@@ -213,7 +210,6 @@
 				6176EF26252CFEE000F4D4DD /* README.md in Resources */,
 				6176EF23252CFC9500F4D4DD /* LICENSE in Resources */,
 				6176EF20252CFA4300F4D4DD /* YoonitHandshake.podspec in Resources */,
-				5C0C64392542108B00EDF95B /* logo_cyberlabs.png in Resources */,
 				6176EFA8252E476000F4D4DD /* Example in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +368,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -394,7 +391,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +421,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
