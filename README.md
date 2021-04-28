@@ -78,9 +78,9 @@ class HandshakeViewController: HandshakeListener {
 
 ### Method
 
-| Function                | Parameters                                             | Description
-| -                            | -                                                               | -
-| updateFingerprint | `publicKey: String, serviceUrl`  | Update the list of fingerprints from the remote server. The method is asynchronous. Response can get in the `HandshakeListener` interface.
+| Function                | Parameters                                                              | Description
+| -                            | -                                                                                | -
+| updateFingerprint | `publicKey: String, serviceUrl: String`  | Update the list of fingerprints from the remote server. The method is asynchronous. Response can get in the `HandshakeListener` interface.
 
 ### Event
 
