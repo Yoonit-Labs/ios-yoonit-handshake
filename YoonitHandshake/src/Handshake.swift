@@ -15,13 +15,9 @@ import WultraSSLPinning
 @objc
 public class Handshake: NSObject {
     
-    private var handshakeListener: HandshakeListener!
-    
     @objc
-    public init(_ handshakeListener: HandshakeListener) {
-        self.handshakeListener = handshakeListener
-    }
-        
+    public var handshakeListener: HandshakeListener?
+            
     @objc
     public func updateFingerprints(
         _ publicKey: String,
@@ -37,25 +33,25 @@ public class Handshake: NSObject {
 
             certStore = CertStore.powerAuthCertStore(configuration: configuration)
         } else {
-            self.handshakeListener.onResult(HandshakeResult.INVALID_URL_SERVICE)
+            self.handshakeListener?.onResult(HandshakeResult.INVALID_URL_SERVICE)
         }
         
         certStore?.update { (result, error) in
             switch result {
             case .ok:
-                self.handshakeListener.onResult(HandshakeResult.OK)
+                self.handshakeListener?.onResult(HandshakeResult.OK)
                 
             case .storeIsEmpty:
-                self.handshakeListener.onResult(HandshakeResult.STORE_IS_EMPTY)
+                self.handshakeListener?.onResult(HandshakeResult.STORE_IS_EMPTY)
                 
             case .networkError:
-                self.handshakeListener.onResult(HandshakeResult.NETWORK_ERROR)
+                self.handshakeListener?.onResult(HandshakeResult.NETWORK_ERROR)
                 
             case .invalidData:
-                self.handshakeListener.onResult(HandshakeResult.INVALID_DATA)
+                self.handshakeListener?.onResult(HandshakeResult.INVALID_DATA)
                 
             case .invalidSignature:
-                self.handshakeListener.onResult(HandshakeResult.INVALID_SIGNATURE)            
+                self.handshakeListener?.onResult(HandshakeResult.INVALID_SIGNATURE)            
             }
         }
     }
